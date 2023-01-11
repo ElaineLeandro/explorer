@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  border:2px solid blue;
+  display: grid;
+  grid-template-areas:
+  "sectionA Bagaca Bagaca"
+  "sectionA Comments Comments"
+  "sectionA Comments Comments"
+  "Desespero Desespero Desespero";
+  height: 100vh;
+
+  /* gap: 10px; */
+  /* padding: 10px; */
+}
+
+h1 {
+  grid-area:sectionA;
+  background-color: blue;
+  
+}
+
+span{
+  grid-area:Bagaca;
+  background-color: purple;
+}
+
+p{
+  grid-area:Comments;
+  background-color: green;
+
+}
+
+footer{
+  height: 20vh;
+  grid-area:Desespero;
+  background-color: yellow;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+ 
+
+
+}

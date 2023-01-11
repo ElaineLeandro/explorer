@@ -1,0 +1,24 @@
+section{
+  display: flex;
+  border: 2px solid green;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  /* flex-direction: column; */
+  height: 200px;
+}
+
+p:nth-child(2),
+p:nth-child(3){
+  border: 1px solid blue;
+  flex-grow:1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+p:nth-child(1){
+  flex-basis: 100px;
+  border: 1px solid  
+  purple;
+}
