@@ -87,7 +87,7 @@ svg{
   cursor: pointer;
   
 }
-.hide{
+.color{
  background-color:var(--bg-base) ;
 }
 .card-spacing{
