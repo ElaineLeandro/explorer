@@ -65,7 +65,7 @@ const secondsDisplay = document.querySelector('.seconds')
 let timerTimerOut;
 
 function counter() {
-  setTimeout( function() {
+  timerTimerOut = setTimeout( function() {
     let seconds = Number(secondsDisplay.textContent)
     let minutes = Number(minutesDisplay.textContent)
 
@@ -93,16 +93,23 @@ function hold (){
   clearTimeout(timerTimerOut)
 }
 
-buttonPlay.addEventListener('click', () => {
+buttonPlay.addEventListener('click', (event) => {
   counter()
-  
-
+  buttonPlay.disabled = true
 })
 
 buttonStop.addEventListener('click', () => {
- 
+  hold()
+  buttonPlay.disabled = false
+  console.log("Teste!", hold)
 })
 
+buttonSum.addEventListener('click', () =>{
+  let minutes = Number(minutesDisplay.textContent)
+  minutesDisplay.textContent = String(minutes + 5).padStart(2, '0')
+})
 
-
-
+buttonSub.addEventListener('click', () =>{
+  let minutes = Number(minutesDisplay.textContent)
+  minutesDisplay.textContent = String(minutes - 5).padStart(2, '0')
+})
